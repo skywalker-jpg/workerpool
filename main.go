@@ -83,7 +83,6 @@ func (p *Pool) AddWorker() {
 
 // RemoveWorker удаляет воркера из pool по ID
 func (p *Pool) RemoveWorker(id int) {
-	log.Println(p.Workers, id)
 	worker, exists := p.Workers[id-1]
 	if !exists {
 		fmt.Printf("Воркер с ID %d не найден\n", id)
